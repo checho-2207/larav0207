@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('cambio__repuestos', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_mantenimiento');
             $table->integer('Cantidad');
             $table->string('Nombre');
             $table->string('Calidad');
+            $table->foreignId('mantenimientoId')->references('id')->on('mantenimientos');
             $table->timestamps();
         });
     }

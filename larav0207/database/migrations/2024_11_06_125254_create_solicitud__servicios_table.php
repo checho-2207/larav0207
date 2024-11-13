@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('solicitud__servicios', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_usuario');
-            $table->boolean('Aprobacion de servicio');
+            $table->string('Nombre');
+            $table->string('Vehiculo');
+            $table->date('Fecha_solicitada');
+            $table->foreignid('usuarioid')->references('id')->on('usuarios');
+            $table->foreignid('vehiculoid')->referencess('id')->on('vehiculos');
+            $table->foreignId('citaid')->references('id')->on('citas');
             $table->timestamps();
         });
     }

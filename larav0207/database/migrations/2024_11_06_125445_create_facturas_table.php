@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
+            $table->string('Nombre');
+            $table->string('Apellido');
+            $table->string('Correo');
+            $table->string('Telefono');
+            $table->date('Fecha');
             $table->string('Repuestos');
             $table->string('Mano_Obra');
             $table->integer('Valor_Total');
-            $table->date('Fecha');
-            $table->string('Dato_CLiente');
+            $table->foreignId('mantenimientoId')->references('id')->on('mantenimientos');
             $table->timestamps();
         });
     }

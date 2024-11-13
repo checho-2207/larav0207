@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('Nombre');
             $table->string('Apellido');
-            $table->string('Password');
             $table->string('Correo')->unique();
-            $table->string('Tipo de usuario');
+            $table->string('Password');
+            $table->enum('tipo_usuario', ['admin', 'usuario', 'invitado']);
             $table->timestamps();
 
         });

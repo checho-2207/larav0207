@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('mantenimientos', function (Blueprint $table) {
             $table->id();
-            $table->string('Tipo_mantenimiento');
+            $table->enum('tipo_mantenimineto', ['Preventivo', 'Correctivo', 'Predictivo']);
             $table->date('Fecha_Inicial');
             $table->date('Fecha_Final');
             $table->string('Garantia');
+            $table->foreignId('vehiculoId')->references('id')->on('vehiculos');
             $table->timestamps();
         });
     }

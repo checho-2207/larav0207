@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->string('Id_Factura');
             $table->date('Fecha_Pago');
             $table->integer('Cantidad');
             $table->string('Metodo_pago');/**Solo Efectivo o NEQUI*/
+            $table->foreignId('facturaId')->references('id')->on('facturas');
             $table->timestamps();
+            
         });
     }
 

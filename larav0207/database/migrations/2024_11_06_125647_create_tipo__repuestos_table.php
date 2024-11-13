@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('tipo__repuestos', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_proveedor');
-            $table->integer('Id_Cambio_Repuesto');
             $table->string('Nombre');
             $table->string('Marca');
             $table->integer('Costo');
+            $table->foreignId('proveedoresId')->references('id')->on('proveedors');
+            $table->foreignId('CambioDeRepuestosId')->references('id')->on('cambio__repuestos');
             $table->timestamps();
         });
     }

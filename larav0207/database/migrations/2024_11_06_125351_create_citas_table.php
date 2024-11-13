@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_cliente'); 
             $table->date('Fecha');
             $table->time('Hora');
             $table->text('Descripción');

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cambio_Repuesto extends Model
 {
-    //
+   
 }
