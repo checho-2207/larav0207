@@ -12,16 +12,6 @@
     },
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
-        "clear_cache": "cd scripts/ && bash clear_cache.sh",
-        "update_proyect": "cd scripts/ && bash refresh_project.sh",
-        "make_model": "php artisan make:model",
-        "make_migration": "php artisan make:migration",
-        "make_controller": "php artisan make:controller",
-        "make_view": "php artisan make:view",
-        "make_tables": "php artisan migrate",
-        "update_tables": "php artisan migrate:fresh",
-        "test_laravel": "cd scripts/ && bash test_laravel.sh",
-        "test_localhost": "cd scripts/ && bash test_localhost.sh"
-    }
+        "dev": "vite"
+	}
 }
