@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('Fecha');
             $table->time('Hora');
             $table->text('Descripción');
-            $table->string('Estado');
+            $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada']);
             $table->timestamps();
         });
     }

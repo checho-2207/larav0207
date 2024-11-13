@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->date('Fecha_Pago');
             $table->integer('Cantidad');
-            $table->string('Metodo_pago');/**Solo Efectivo o NEQUI*/
+            $table->enum('Metodo', ['Efectivo', 'Nequi']);
+            /**Solo Efectivo o NEQUI*/
             $table->foreignId('facturaId')->references('id')->on('facturas');
             $table->timestamps();
             

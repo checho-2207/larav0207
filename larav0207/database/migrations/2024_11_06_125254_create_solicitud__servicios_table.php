@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('Vehiculo');
             $table->date('Fecha_solicitada');
             $table->foreignid('usuarioid')->references('id')->on('usuarios');
-            $table->foreignid('vehiculoid')->referencess('id')->on('vehiculos');
             $table->foreignId('citaid')->references('id')->on('citas');
+            $table->foreignId('vehiculoId')->references('id')->on('vehiculos');
             $table->timestamps();
         });
     }

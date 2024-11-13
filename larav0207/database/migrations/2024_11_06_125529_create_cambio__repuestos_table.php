@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('Cantidad');
             $table->string('Nombre');
-            $table->string('Calidad');
+            $table->enum('calidad', ['Alta', 'Media', 'Baja']);
             $table->foreignId('mantenimientoId')->references('id')->on('mantenimientos');
             $table->timestamps();
         });
