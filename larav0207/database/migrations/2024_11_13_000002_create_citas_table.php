@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proveedors', function (Blueprint $table) {
-            $table->id();
-            $table->string('Nombre');
-            $table->string('Dirección');
-            $table->string('Telefono');
-            $table->string('Email');
-            $table->timestamps();
+        Schema::create('citas', function (Blueprint $table) {
+            $table->id()->autoIncrement()->unique();
+            $table->dateTime('date');
+            $table->string('description');
+            $table->string('status');
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('proveedors');
+        Schema::dropIfExists('citas');
     }
 };

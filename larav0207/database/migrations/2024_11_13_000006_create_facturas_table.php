@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('citas', function (Blueprint $table) {
-            $table->id();
-            $table->date('Fecha');
-            $table->time('Hora');
-            $table->text('Descripción');
-            $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada']);
-            $table->timestamps();
+        Schema::create('facturas', function (Blueprint $table) {
+            $table->id()->autoIncrement()->unique();
+            $table->string('details');
+            $table->dateTime('date');
+            $table->foreignId('mantenimiento_id')->constrained('mantenimientos')->cascadeOnDelete();
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('citas');
+        Schema::dropIfExists('facturas');
     }
 };
