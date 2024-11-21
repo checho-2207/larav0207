@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id()->autoIncrement()->unique();
             $table->foreignId('usuario_id')->constrained('usuarios')->cascadeOnDelete();
             $table->foreignId('citas_id')->constrained('citas')->cascadeOnDelete();
+            $table->timestamps();
         });
     }
 

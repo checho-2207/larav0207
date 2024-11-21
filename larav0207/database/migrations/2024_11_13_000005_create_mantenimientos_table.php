@@ -14,7 +14,9 @@ return new class extends Migration
             $table->dateTime('date_start');
             $table->dateTime('date_end');
             $table->boolean('warranty');
+            $table->timestamps();
             $table->foreignId('solicitud_id')->constrained('solicitud_servicios')->cascadeOnDelete();
+            
         });
     }
 

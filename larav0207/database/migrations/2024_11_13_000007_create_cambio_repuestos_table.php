@@ -13,6 +13,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->string('name');
             $table->string('material');
+            $table->timestamps();
             $table->foreignId('mantenimiento_id')->constrained('mantenimientos')->cascadeOnDelete();
         });
     }

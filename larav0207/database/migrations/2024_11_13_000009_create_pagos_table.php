@@ -13,6 +13,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->integer('total');
             $table->string('method');
+            $table->timestamps();
             $table->foreignId('factura_id')->constrained('facturas')->cascadeOnDelete();
         });
     }

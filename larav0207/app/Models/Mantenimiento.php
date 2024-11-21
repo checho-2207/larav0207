@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Mantenimiento extends Model
 {
     protected $table = "mantenimientos";
+    use HasFactory;
     public $timestamps = false;
     protected $fillable = ["type_maintenance", "date_start", "date_end", "warranty"];
 

@@ -15,7 +15,10 @@ return new class extends Migration
             $table->integer('number');
             $table->string('adress');
             $table->string('email');
+            $table->string('password');
+            $table->string('confirmacion');
             $table->enum('rol', ['Usuario','Vendor','Admin']);
+            $table->timestamps();
         });
     }
 

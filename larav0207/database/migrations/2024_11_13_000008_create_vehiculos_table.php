@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('mileage');
             $table->string('make');
             $table->string('plate');
+            $table->timestamps();
             $table->foreignId('mantenimiento_id')->constrained('mantenimientos')->cascadeOnDelete();
         });
     }

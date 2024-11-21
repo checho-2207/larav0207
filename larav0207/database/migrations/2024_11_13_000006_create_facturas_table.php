@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id()->autoIncrement()->unique();
             $table->string('details');
             $table->dateTime('date');
+            $table->timestamps();
             $table->foreignId('mantenimiento_id')->constrained('mantenimientos')->cascadeOnDelete();
+
         });
     }
 

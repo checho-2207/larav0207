@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('make');
             $table->integer('total');
+            $table->timestamps();
             $table->foreignId('proveedor_id')->constrained('proveedores')->cascadeOnDelete();
             $table->foreignId('cambio_id')->constrained('cambio_repuestos')->cascadeOnDelete();
         });
