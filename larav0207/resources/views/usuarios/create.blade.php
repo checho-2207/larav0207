@@ -34,8 +34,7 @@
         <label>Rol:</label>
         <select name="rol">
             <option value="Usuario">Usuario</option>
-            <option value="Vendor">Vendor</option>
-            <option value="Admin">Admin</option>
+            <option value="Vendor">Vendedor</option>
         </select><br>
         
         <button type="submit">Guardar</button>

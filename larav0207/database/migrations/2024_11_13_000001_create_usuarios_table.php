@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('confirmacion');
-            $table->enum('rol', ['Usuario','Vendor','Admin']);
+            $table->enum('rol', ['Usuario','Vendedor']);
             $table->timestamps();
         });
     }
