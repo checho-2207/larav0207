@@ -28,5 +28,5 @@ Route::resource('proveedores', ProveedorController::class);
 Route::resource('tipo_repuestos', TipoRepuestoController::class);
 
 
-// Ruta principal que lleva a la vista home
+
 Route::get('/', [HomeController::class, 'index'])->name('home');

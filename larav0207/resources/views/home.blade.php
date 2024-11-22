@@ -209,7 +209,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="{{ route('citas.create') }}">Agendar cita</a></li>
+                    <li><a href="#">Agendar cita</a></li>
                     <li><a href="#">Factura</a></li>
                     <!-- Botón de inicio de sesión -->
                     <li><button class="login-button">Iniciar Sesión</button></li>
@@ -219,7 +219,7 @@
     <!-- Sección Hero -->
     <section class="hero" id="inicio">
         <video autoplay muted loop>
-            <source src="./6161372-hd_1920_1080_30fps.mp4" type="video/mp4">
+            <source src="{{  Vite::asset('resources/views/6157787-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
         </video>
     </section>
     <!-- Sección de Bienvenida -->
@@ -234,7 +234,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <video class="d-block w-100" autoplay muted loop>
-                        <source src="./6158135-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        <source src="{{  Vite::asset('resources/views/6158135-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                     </video>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Bienvenidos</h5>
@@ -244,7 +244,7 @@
                 <!-- Slide 2 -->
                 <div class="carousel-item">
                     <video class="d-block w-100" autoplay muted loop>
-                        <source src="./9606768-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                        <source src="{{  Vite::asset('resources/views/6157909-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                     </video>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Quiénes Somos</h5>
@@ -254,7 +254,7 @@
                 <!-- Slide 3 -->
                 <div class="carousel-item">
                     <video class="d-block w-100" autoplay muted loop>
-                        <source src="./6157909-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        <source src="{{  Vite::asset('resources/views/9606768-uhd_3840_2160_25fps.mp4')  }}" type="video/mp4">
                         Tu navegador no soporta la reproducción de video.
                     </video>
                     <div class="carousel-caption d-none d-md-block">
@@ -283,21 +283,21 @@
         <div class="products">
             <div class="card">
                 <video autoplay muted loop>
-                    <source src="./6157909-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    <source src="{{  Vite::asset('resources/views/6158066-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                 </video>
                 <h3>Mantenimiento</h3>
                 <p>Limpieza y revisión</p>
             </div>
             <div class="card">
                 <video autoplay muted loop>
-                    <source src="./9606768-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    <source src="{{  Vite::asset('resources/views/9606768-uhd_3840_2160_25fps.mp4')  }}" type="video/mp4">
                 </video>
                 <h3>Reparación</h3>
                 <p>Arreglos y cambios de repuestos</p>
             </div>
             <div class="card">
                 <video autoplay muted loop>
-                    <source src="./istockphoto-1442287610-640_adpp_is.mp4" type="video/mp4">
+                    <source src="{{  Vite::asset('resources/views/6161372-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                 </video>
                 <h3>Repuestos</h3>
                 <p>Repuestos para diversos equipos</p>
