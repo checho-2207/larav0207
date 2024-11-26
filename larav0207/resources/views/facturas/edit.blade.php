@@ -1,8 +1,4 @@
-@extends('layouts.app')
 
-@section('title', 'Editar Factura')
-
-@section('content')
     <h1>Editar Factura</h1>
     <form action="{{ route('facturas.update', $factura->id) }}" method="POST">
         @csrf
@@ -20,4 +16,4 @@
         <button type="submit">Actualizar</button>
     </form>
     <a href="{{ route('facturas.index') }}">Volver</a>
-@endsection
+

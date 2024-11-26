@@ -1,8 +1,4 @@
-@extends('layouts.app')
 
-@section('title', 'Crear Factura')
-
-@section('content')
     <h1>Crear Factura</h1>
     <form action="{{ route('facturas.store') }}" method="POST">
         @csrf
@@ -18,4 +14,3 @@
         <button type="submit">Guardar</button>
     </form>
     <a href="{{ route('facturas.index') }}">Volver</a>
-@endsection

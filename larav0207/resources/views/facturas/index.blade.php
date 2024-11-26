@@ -1,8 +1,4 @@
-@extends('layouts.app')
 
-@section('title', 'Lista de Facturas')
-
-@section('content')
     <h1>Facturas</h1>
     <a href="{{ route('facturas.create') }}">Crear Factura</a>
     <table border="1">
@@ -35,4 +31,4 @@
             @endforeach
         </tbody>
     </table>
-@endsection
+

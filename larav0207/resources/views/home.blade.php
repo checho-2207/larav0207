@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JATS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         /* Estilos generales */
         body {
@@ -12,11 +13,11 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #1a1a2e;
+            background-color: #535353;
         }
         
         .login-button {
-            background-color: #e94560;
+            background-color: #FFD700;
             color: #fff;
             padding: 6px 7px;
             border: none;
@@ -27,7 +28,7 @@
         }
 
         .login-button:hover {
-            background-color: #c72d4a;
+            background-color: #66580b;
             transform: scale(1.05);
         }
 
@@ -54,6 +55,7 @@
 
         nav ul li {
             margin-left: 20px;
+            margin-block: auto;
         }
 
         nav ul li a {
@@ -106,6 +108,7 @@
            justify-content: center;
            text-align: center;
            padding: 40px;
+           filter: brightness(75%); /* Oscurecer un poco el video para que el texto resalte más */
         }
         .products, .services {
             display: flex;
@@ -142,22 +145,25 @@
             top: 0;
             left: 0;
             z-index: -1;
+          
         }
 
         .card h3 {
             margin: 10px 0;
-            color: #fff;
+            color: #FFD700;
             z-index: 1;
+            filter: brightness(1.5);
         }
 
         .card p {
-            color: #fff;
+            color: #FFD700;
             z-index: 1;
+            filter: brightness(1.5);
         }
 
         /* Pie de página */
         footer {
-            background-color: #535353;
+            background-color: #000;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -199,28 +205,84 @@
         .social-container a:hover svg {
             transform: translateY(-5px);
         }
+        .user-icon {
+    font-size: 28px;
+    margin-left: 15px;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.user-icon:hover {
+    color: #66580b;
+}
+.announcement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejorar la legibilidad */
+}
+
+.announcement h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #f7b800;  /* Color cálido que resalta bien sobre el fondo */
+    font-family: 'Cursive', sans-serif;  /* Fuente estilizada */
+    filter: brightness(1.5);
+}
+
+.announcement p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f7b800;  /* Mismo color para el subtítulo */
+    filter: brightness(1.5);
+}
+.p{
+color: #f7b800;
+filter: brightness(1.5);
+}
+
+.h5{
+    color: #f7b800;
+    filter: brightness(1.5);
+}
+.h2{
+    color: #f7b800;
+    filter: brightness(1.5);
+}
+
     </style>
 </head>
 <body>
 
     <!-- Encabezado -->
     <header>
-      <img src="./Captura de pantalla 2024-11-14 084506.png" alt="Logo del sitio">
+      <img src="{{ asset('images/logo.jpeg') }}" alt="Logo del sitio">
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Agendar cita</a></li>
+                    <li><a href="{{ route('home') }}">Inicio</a></li>
+                    <li><a href="{{ route('citas.create') }}">Agendar cita</a></li>
                     <li><a href="#">Factura</a></li>
-                    <!-- Botón de inicio de sesión -->
                     <li><button class="login-button">Iniciar Sesión</button></li>
+                    <div class="user-icon">
+                <span class="material-icons">person</span>
+            </div>
                 </ul>
             </nav>
+            
         </header>
     <!-- Sección Hero -->
     <section class="hero" id="inicio">
         <video autoplay muted loop>
             <source src="{{  Vite::asset('resources/views/6157787-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
         </video>
+        <div class="announcement">
+            <h1>Bienvenidos a JATS</h1>
+            <p>Tu taller de confianza</p>
+        </div>
     </section>
     <!-- Sección de Bienvenida -->
     <section class="section1" id="bienvenida">
@@ -237,8 +299,8 @@
                         <source src="{{  Vite::asset('resources/views/6158135-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                     </video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Bienvenidos</h5>
-                        <p>En JATS nos complace ofrecerte productos y servicios de la más alta calidad.</p>
+                        <h5 class="h5">Bienvenidos</h5>
+                        <p class="p">En JATS nos complace ofrecerte productos y servicios de la más alta calidad.</p>
                     </div>
                 </div>
                 <!-- Slide 2 -->
@@ -247,8 +309,8 @@
                         <source src="{{  Vite::asset('resources/views/6157909-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
                     </video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Quiénes Somos</h5>
-                        <p>Somos un equipo apasionado por la tecnología y la reparación de equipos.</p>
+                        <h5 class="h5">Quiénes Somos</h5>
+                        <p class="p">Somos un equipo apasionado por la tecnología y la reparación de equipos.</p>
                     </div>
                 </div>
                 <!-- Slide 3 -->
@@ -258,8 +320,8 @@
                         Tu navegador no soporta la reproducción de video.
                     </video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Satisfacción Garantizada</h5>
-                        <p>Nuestro compromiso es tu satisfacción total con servicios confiables y de calidad.</p>
+                        <h5 class="h5">Satisfacción Garantizada</h5>
+                        <p class="p">Nuestro compromiso es tu satisfacción total con servicios confiables y de calidad.</p>
                     </div>
                 </div>
             </div>
@@ -307,10 +369,10 @@
 
     <!-- Sección de Contacto -->
     <section class="section" id="contacto">
-        <h2>Contacto</h2>
-        <p>Dirección: Calle Principal #123, Ciudad</p>
-        <p>Teléfono: +57 123 456 789</p>
-        <p>Email: contacto@ejemplo.com</p>
+        <h2 class="h2">Contacto</h2>
+        <p class="p">Dirección: Calle Principal #123, Ciudad</p>
+        <p class="p">Teléfono: +57 123 456 789</p>
+        <p class="p">Email: contacto@ejemplo.com</p>
     </section>
 
     <!-- Pie de página -->

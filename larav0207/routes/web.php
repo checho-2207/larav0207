@@ -30,3 +30,8 @@ Route::resource('tipo_repuestos', TipoRepuestoController::class);
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/citas/create', [CitaController::class, 'create'])->name('citas.create');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
