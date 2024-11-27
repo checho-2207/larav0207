@@ -277,7 +277,7 @@ filter: brightness(1.5);
     <!-- Sección Hero -->
     <section class="hero" id="inicio">
         <video autoplay muted loop>
-            <source src="{{  Vite::asset('resources/views/6157787-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
+            <source loading="lazy" src="{{  Vite::asset('resources/views/6157787-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
         </video>
         <div class="announcement">
             <h1>Bienvenidos a JATS</h1>

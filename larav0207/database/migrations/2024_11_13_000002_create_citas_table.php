@@ -13,10 +13,22 @@ return new class extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
-            $table->dateTime('date');
-            $table->string('description');
-            $table->string('status');
-            $table->timestamps();
+            $table->string('first_name');
+        $table->string('last_name');
+        $table->string('email');
+        $table->string('phone');
+        $table->string('city');
+        $table->string('neighborhood');
+        $table->string('address');
+        $table->string('vehicle_brand');
+        $table->string('vehicle_model');
+        $table->string('plate_number');
+        $table->integer('mileage');
+        $table->string('service_type');
+        $table->date('suggested_date');
+        $table->time('suggested_time');
+        $table->text('comments')->nullable();
+        $table->timestamps();
         });
     }
 
