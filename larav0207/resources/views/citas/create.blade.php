@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+    @extends('layouts.app')
+
+    @section('title', 'Inicio')
+    
+    @section('content')
     <div class="container mt-5">
         <h1>Crear Nueva Cita</h1>
         <form action="{{ route('citas.store') }}" method="POST">
@@ -74,5 +80,6 @@
             <button type="submit" class="btn btn-success">Guardar</button>
         </form>
     </div>
+    @endsection
 </body>
 </html>

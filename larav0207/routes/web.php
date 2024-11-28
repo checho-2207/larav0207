@@ -34,4 +34,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/citas/create', [CitaController::class, 'create'])->name('citas.create');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/contactanos', function () {
+    return view('contactanos'); // Asegúrate de que la vista contactanos exista en resources/views
+})->name('contactanos');
+
+
 
