@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Retorna la vista home.blade.php
+      
         return view('home');
     }
 }

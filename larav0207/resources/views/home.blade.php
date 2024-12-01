@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #535353;
+            background-color: #0A0A0A;
         }
     
         /* Sección Hero */
@@ -154,6 +154,72 @@ filter: brightness(1.5);
     color: #f7b800;
     filter: brightness(1.5);
 }
+/* Seccion de porque nosotros */
+.why-us h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #FFF700;
+}
+
+.why-us h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFF700;
+    margin: 10px auto 0;
+}
+
+.why-us .description {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0 20px;
+    line-height: 1.6;
+}
+
+.why-us .features {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que las cartas se distribuyan uniformemente */
+    gap: 20px;
+    flex-wrap: nowrap; /* Evita que las cartas se acomoden en varias filas */
+}
+
+.why-us .feature {
+    flex: 1 1 calc(33.33% - 20px); /* Cada carta ocupa un tercio del espacio */
+    max-width: 33.33%; /* Asegura que las cartas no sobrepasen el 33% del ancho */
+    min-width: 200px; /* Mínimo tamaño de las cartas */
+    height: 305px;
+    width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.why-us .feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.why-us .feature h3 {
+    font-size: 18px;
+    color: #FFF700;
+    margin-bottom: 10px;
+}
+
+.why-us .feature p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+}
 
     </style>
 </head>
@@ -177,53 +243,33 @@ filter: brightness(1.5);
     <!-- Sección de Bienvenida -->
     <section class="section1" id="bienvenida">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <video class="d-block w-100" autoplay muted loop>
-                        <source src="{{  Vite::asset('resources/views/6158135-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
-                    </video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="h5">Bienvenidos</h5>
-                        <p class="p">En JATS nos complace ofrecerte productos y servicios de la más alta calidad.</p>
+           
+            <section class="why-us">
+                <h2>¿POR QUÉ NOSOTROS?</h2>
+                <p class="description">
+                    Al ser un taller 100% virtual podemos llegar hasta donde estés, así podremos realizar el mantenimiento a tu auto desde el lugar donde te sientas más cómodo, ya sea en tu casa mientras teletrabajas o en tu oficina.
+                </p>
+                <p class="description">
+                    Te brindamos el apalancamiento de nuestros medios digitales los cuales los podrás utilizar como herramienta para lo que necesites, con una plataforma web donde puedes ver y conocer nuestros servicios, el equipo de trabajo, nuestros testimonios y además agendar los que requieras.
+                </p>
+                <div class="features">
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4549/4549504.png" alt="Teléfono">
+                        <h3>Servicio al cliente personalizado y garantizado.</h3>
+                        <p>Atendemos y resolvemos cada una de tus inquietudes y dudas, ya sea de nuestros servicios como tal o de algún problema que tengas con tu auto.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4549/4549573.png" alt="Servicios">
+                        <h3>Convierte los servicios brindados en una experiencia.</h3>
+                        <p>Al realizar los servicios que tu auto necesita con nosotros puedes visualizar e incluso ser parte de los trabajos que se le realizan a tu vehículo si así lo deseas, generando toda una experiencia para ti.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4549/4549682.png" alt="Tiempo">
+                        <h3>Ganarás y aprovecharás mejor el tiempo.</h3>
+                        <p>Al agendar uno de nuestros servicios iremos hasta la comodidad de tu hogar u oficina, donde podrás recibir un servicio totalmente personalizado y podrás visualizar y hasta aprender de todo lo que se realiza a tu vehículo.</p>
                     </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay muted loop>
-                        <source src="{{  Vite::asset('resources/views/6157909-hd_1920_1080_30fps.mp4')  }}" type="video/mp4">
-                    </video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="h5">Quiénes Somos</h5>
-                        <p class="p">Somos un equipo apasionado por la tecnología y la reparación de equipos.</p>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay muted loop>
-                        <source src="{{  Vite::asset('resources/views/9606768-uhd_3840_2160_25fps.mp4')  }}" type="video/mp4">
-                        Tu navegador no soporta la reproducción de video.
-                    </video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="h5">Satisfacción Garantizada</h5>
-                        <p class="p">Nuestro compromiso es tu satisfacción total con servicios confiables y de calidad.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
+            </section>
         
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
